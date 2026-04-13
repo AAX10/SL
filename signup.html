@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+
+<style>
+
+body{
+background: linear-gradient(to bottom right,aqua,#73b2f5);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+font-family:Arial;
+}
+
+form{
+background:aliceblue;
+border:6px outset blue;
+padding:35px;
+width:360px;
+border-radius:8px;
+}
+
+h1{
+text-align:center;
+margin-bottom:25px;
+}
+
+.form-group{
+display:flex;
+flex-direction:column;
+margin-bottom:18px;
+}
+
+label{
+font-weight:bold;
+margin-bottom:5px;
+}
+
+input{
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+.password-box{
+display:flex;
+}
+
+.password-box input{
+flex:1;
+}
+
+.eye{
+cursor:pointer;
+padding:10px;
+background:#ddd;
+}
+
+button{
+background:linear-gradient(to bottom,#28a745,#1e7e34);
+color:white;
+padding:12px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+width:100%;
+margin-top:10px;
+}
+
+.links{
+text-align:center;
+margin-top:15px;
+}
+
+a{
+text-decoration:none;
+color:#0056b3;
+}
+
+small{
+color:gray;
+font-size:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<form onsubmit="return registerUser()">
+
+<h1>Sign Up</h1>
+
+<div class="form-group">
+<label>Username</label>
+<input type="text" id="newUser" required>
+</div>
+
+<div class="form-group">
+<label>Password</label>
+
+<div class="password-box">
+<input type="password" id="newPass" required>
+<span class="eye" onclick="togglePassword()">👁</span>
+</div>
+
+
+
+</div>
+
+<div class="form-group">
+<label>Confirm Password</label>
+
+<div class="password-box">
+<input type="password" id="confirmPass" required>
+<span class="eye" onclick="toggleConfirmPassword()">👁</span>
+</div>
+
+
+</div>
+
+<button type="submit">Create Account</button>
+
+<div class="links">
+<a href="login.html">Already have an account? Login</a>
+</div>
+
+</form>
+
+<script>
+
+document.getElementById("confirmPass").addEventListener("paste",function(e){
+e.preventDefault();
+alert("Pasting is not allowed in Confirm Password field.");
+});
+
+function togglePassword(){
+
+let pass=document.getElementById("newPass");
+
+if(pass.type==="password")
+pass.type="text";
+else
+pass.type="password";
+
+}
+
+function toggleConfirmPassword(){
+
+let pass=document.getElementById("confirmPass");
+
+if(pass.type==="password")
+pass.type="text";
+else
+pass.type="password";
+
+}
+
+function registerUser(){
+
+let username=document.getElementById("newUser").value;
+let password=document.getElementById("newPass").value;
+let confirm=document.getElementById("confirmPass").value;
+
+let strongPassword=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+if(!strongPassword.test(password)){
+
+alert("Password must contain:\n- 8 characters\n- uppercase letter\n- lowercase letter\n- number\n- special character");
+return false;
+
+}
+
+if(password!==confirm){
+
+alert("Passwords do not match!");
+return false;
+
+}
+
+localStorage.setItem("username",username);
+localStorage.setItem("password",password);
+
+alert("Signup Successful! Please login.");
+
+window.location.href="login.html";
+
+return false;
+
+}
+
+</script>
+
+</body>
+</html>
+
