@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: url("hc.jpg") no-repeat center center / cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        form {
+            background-color: rgba(240, 248, 255, 0.95);
+            width: 450px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form autocomplete="off" method="post" novalidate>
+
+        <fieldset><legend><h1>Medical Leave Form</h1></legend>
+
+        <label for="name">Student Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Ansh"><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" ><br><br>
+
+        <label for="ID">Student ID:</label><br>
+        <input type="number" id="ID" name="ID"><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{5}-[0-9]{5}" placeholder="xxxxx-xxxxx"><br><br>
+        
+        <label for="StartDate"> Leave Start Date: </label><br>
+        <input type="date" id="StartDate" name="StartDate" min="2026-02-05"><br><br>
+        <label for="EndDate"> Leave End Date: </label><br>
+        <input type="date" id="EndDate" name="EndDate" max="2026-07-15"><br><br>
+
+        <label for="reason">Reason for Medical Leave: </label><br>
+        <textarea id="reason" name="reason" rows="4" cols="50" ></textarea><br><br>
+
+        <label for="reason">Reason for leave: </label><br><br>
+        <input type="radio" id="otherreason" name="reason" value="Medical">Medical<br><br>
+        <input type="radio" id="otherreason" name="reason" value="Urgent Work">Urgent Work<br><br>
+        <input type="radio" id="otherreason" name="reason" value="Going Home">Going Home<br><br>
+        <input type="radio" id="otherreason" name="reason" value="Others">Other: <input type="text" id="otherreasontext" name="otherreasontext" placeholder="Specify other reason"><br><br>
+
+        <label for="location">Location: </label><br><br>
+        <input type="checkbox" id="location" name="location" value="location">
+        <label for="location">Chandigarh</label><br><br>
+        <input type="checkbox" id="location" name="location" value="location">
+        <label for="location">Shimla</label><br><br>
+        <input type="checkbox" id="location" name="location" value="location">
+        <label for="location">Dharamshala</label><br><br>
+        <input type="checkbox" id="location" name="location" value="location">
+        <label for="location">Manali</label><br><br>
+        <input type="checkbox" id="location" name="location" value="location">
+        <label for="location">Others: <input type="text" id="otherlocationtext" name="otherlocationtext" placeholder="Location"></label><br><br>
+
+        <label for="companions">Going with:</label><br>
+        <select id="companions" name="companions[]" size="5" multiple>
+            <option value="Parents">Parents</option>
+            <option value="Friends">Friends</option>
+            <option value="Relatives">Relatives</option>
+            <option value="Alone">Alone</option>
+            <option value="Others">Others</option>
+        </select><br><br>
+
+
+
+        
+
+        <button type="button" onclick="alert('Submitted Successfully!')">Submit</button>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

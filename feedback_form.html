@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #a8e6ff, #6fa8ff);
+        }
+
+        div {
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            width: 340px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        label {
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],    
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        input[type="radio"] {
+            margin-right: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 18px;
+            border: none;
+            border-radius: 10px;
+            background: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div>
+        <h1><b> FEEDBACK FORM <b></h1>
+        <form>
+
+            <label for="name">Student Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email*:</label><br>
+            <input type="email" id="email" name="email" pattern="^[^@]+@nitkkr\.ac\.in$"
+    title="Please enter your NIT Kurukshetra email (example@nitkkr.ac.in)"
+    required><br><br>
+
+            <label for="facultyname" id="facultyname" name="facultyname">Faculty Name:</label><br>
+            <select id="faculty" name="faculty">
+                <option value="zero">Select Faculty</option>
+                <option value="one">Dr. Sweta Sharma</option>
+                <option value="two">Dr. Bharti Sinha</option>
+                <option value="three">Dr. M K Murmu</option>
+                <option value="four">Dr. Vikram Singh</option>
+                <option value="five">Dr. Priyanka</option>
+            </select><br><br>
+
+            <label for="rating">Rating:</label><br><br>
+            <input type="radio" id="excellent" name="rating" value="excellent">
+            <label for="excellent">5. Excellent</label><br>
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">4. Good</label><br>
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">3. Average</label><br>
+            <input type="radio" id="poor" name="rating" value="poor">
+            <label for="poor">2. Poor</label><br>
+            <input type="radio" id="very_poor" name="rating" value="very_poor">
+            <label for="very_poor">1. Very Poor</label><br><br>
+
+            <label for="improvement">Positive aspects: </label><br>
+            <textarea id="improvement" name="improvement" rows="4"></textarea><br><br>
+            <label for="comments">Scope for improvement:</label><br>
+            <textarea id="comments" name="comments" rows="4" placeholder="Scope for improvement"></textarea><br><br>
+
+            <button type="submit">Submit </button>
+        </form>
+
+
+        
+    </div>
+    
+</body>
+</html>
