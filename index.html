@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 1500px; margin: auto; padding: 20px; background-color: #79c7d5; }
+        section {background: #fff; margin: 20px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            border: 2px solid #333;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        h1{
+            background-color: #222;
+        }
+        h2{
+            margin: auto;
+            text-align: center;
+            background-color: #79c7d5;
+            width:fit-content;
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        header { background: #333; color: #fff; padding: 1rem; text-align: center; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="College Logo" style="width:150px; height:auto; border-radius:8px;">
+        <h1 style="font-family: helvetica;"> GIRIVAR BHAWAN </h1>
+        <h3> Boys Hostel</h3>
+        <button type="button" onclick="window.location.href='login.html'" style="padding: 12px; font-family:Arial, Helvetica, sans-serif">
+            Login
+        </button>
+        <p> Welcome to Girivar Bhawan Hostel Page. Here you will find all the necessary information regarding the hostel facilities, rules, and amenities provided to the residents. </p>
+    </header>
+    <marquee 
+        behavior="scroll" 
+        direction="left" 
+        scrollamount="6"
+        style="
+            background:#222;
+            color:white;
+            padding:10px;
+            border-radius:8px;
+            margin-top:15px;
+            font-weight:bold;
+        ">
+
+        Welcome to Girivar Bhawan | Mess Timings: 7AM - 9AM | 
+        | Pay Fees Before Deadline | 
+
+    </marquee>
+
+    <section id="images" >
+        <h2>Hostel Navigation</h2><br>
+
+        <div style="text-align:center;">
+            <picture>
+                <source media="(max-width: 600px)" srcset="h7-small.jpg">
+
+                <source media="(max-width: 1024px)" srcset="h7-medium.jpg">
+
+                <img src="h7.jpg"
+                    alt="Girivar Bhawan Hostel"
+                    usemap="#hostelmap"
+                    style="width:100%; max-width:800px; height:auto; border-radius:8px;">
+            </picture>
+
+        </div>
+
+        <map name="hostelmap">
+
+            <area shape="poly"
+                coords="50,50, 750,50, 780,200, 700,350, 400,450, 100,350, 20,200"
+                href="https://nitkkr.ac.in/"
+                alt="Girivar Bhawan Hostel"
+                title="Click Hostel Building">
+
+        </map>
+
+    </section>
+    <section id="frames">
+        <h2>Campus & City Information</h2><br>
+
+        <iframe 
+            src="https://www.google.com/maps?q=NIT+Kurukshetra&output=embed"
+            width="100%"
+            height="500"
+            style="border:3px solid #333; border-radius:8px; padding:10px;">
+
+            <iframe
+                src="https://nitkkr.ac.in/"
+                width="95%"
+                height="400"
+                style="border:3px solid #555; border-radius:8px; margin:10px;">
+
+                <iframe
+                    src="https://www.kuk.ac.in/"
+                    width="90%"
+                    height="300"
+                    style="border:3px solid #777; border-radius:8px; margin:10px;">
+                </iframe>
+
+            </iframe>
+
+        </iframe>
+
+    </section>
+    
+
+
+
+ 
+
+    <section id="Desc">
+        <h2>Hostel Description</h2>
+        <p> Girivar Bhawan is a well-maintained boys' hostel located in the heart of the campus. It provides a comfortable living environment for students with modern amenities and facilities. The hostel is equipped with air-conditioned rooms, common areas, and 24/7 security.</p>
+    </section>
+    <section id="Facilities">
+        <h2>Facilities</h2>
+        <ul>
+            <li>Spacious rooms with study tables and wardrobes</li>
+            <li>High-speed LAN connectivity</li>
+            <li>Common recreational areas including Common room</li>
+            <li>Mess facilities offering nutritious meals</li>
+            <li>Laundry services</li>
+            <li>24/7 security and CCTV surveillance</li>
+            <li>Badminton Court </li>
+        </ul>
+    </section>
+    <section id="search">
+        <h2>Search Hostel Facilities</h2>
+
+        <form>
+            <label for="facility">Choose a facility:</label><br><br>
+
+            <input list="facilityList" id="facility" name="facility"
+                placeholder="Start typing..."
+                style="width:300px; padding:8px;">
+
+            <datalist id="facilityList">
+                <option value="Single Room">
+                <option value="LAN Connectivity">
+                <option value="Mess Facility">
+                <option value="Laundry Service">
+                <option value="Common Room">
+                <option value="Badminton Court">
+                <option value="24/7 Security">
+                <option value="CCTV Surveillance">
+            </datalist>
+
+            <br><br>
+
+            <button type="submit"
+                    style="padding:8px 20px; background:#333; color:#fff; border:none; border-radius:5px;">
+                Search
+            </button>
+        </form>
+    </section>
+
+
+    <section id="Rules">
+        <h2>Hostel Rules</h2>
+        <ol>
+            <li>Maintain cleanliness and hygiene in the hostel premises.</li>
+            <li>Visitors are allowed only during specified hours.</li>
+            <li>Strictly no use of alcohol, drugs, or any illegal substances.</li>
+            <li>Respect the privacy and belongings of fellow residents.</li>
+            <li>Follow the curfew timings as specified by the hostel administration.</li>
+            <li>Submission of hostel fees and mess fees on time.</li>
+        </ol>
+    </section>
+    <section id="table">
+        <table>
+            <tr>
+                <th>Facility</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Room Type</td>
+                <td>Single Room</td>
+            </tr>
+            <tr>
+                <td>Capacity</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>Semester Fees</td>
+                <td>15000</td>
+            </tr>
+            
+        </table>
+    </section>
+    <a href="medical_form.html">Medical Leave Form</a><br>
+
+    <a href="admission.html">Hostel Admission</a> | <a href="enquiry.html">Enquiry</a>
+       
+
+</body>
+</html>
